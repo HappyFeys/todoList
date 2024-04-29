@@ -32,8 +32,9 @@ header .header__container {
   z-index: 1;
 }
 header .header__container input {
-  background-image: url("/assets/img/icons/search.svg");
+  background-image: url("https://happyfeys.github.io/todoList/assets/img/icons/search.svg");
   background-repeat: no-repeat;
+  background-size: contain;
   text-indent: 20px;
   border: none;
   border-radius: 20px;
