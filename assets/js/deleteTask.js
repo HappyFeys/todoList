@@ -1,10 +1,15 @@
 export function deleteTask() {
-    const btnDelete = document.querySelectorAll('.btnDelete');
-    console.log(btnDelete);
-    for (let i = 0; i < btnDelete.length; i++) {
-        btnDelete[i].addEventListener("click", ()=>{
+    const zoneTask = document.querySelectorAll('.zone__tache');
 
-            console.log("tu as click sur le delete");
-        })
+    // Utiliser un événement délégué au niveau du conteneur parent des tâches
+    for (let i = 0; i < zoneTask.length; i++) {
+        zoneTask[i].addEventListener('click', (event) => {
+            // Vérifier si le clic a été effectué sur un bouton de suppression
+            if (event.target.classList.contains('btnDelete')) {
+                // Supprimer la tâche parente
+                event.target.closest('.task').remove();
+                console.log("Tâche supprimée");
+            }
+        });
     }
 }

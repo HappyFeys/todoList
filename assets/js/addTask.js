@@ -47,32 +47,3 @@ export function addTask() {
     })
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function createTask(element) {
-    const div = document.createElement('div');
-    div.classList.add('task');
-    const checkbox = document.createElement('input');
-    checkbox.setAttribute('type', 'checkbox');
-    div.appendChild(checkbox);
-    const p = document.createElement('p');
-    div.appendChild(p);
-}
-
