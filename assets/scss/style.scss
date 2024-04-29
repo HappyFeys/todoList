@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f7f7f7;
+    font-family: "Poppins", "Open Sans", sans-serif;
+}
+
+//typographie
+
+$poppinsThin : 100;
+$openSansLight : 300;
+
+@mixin heading1{
+    font-weight: bold;
+    font-size: 26px;
+}
+
+@mixin subheading1{
+    font-weight: 400;
+    font-size: 21px;
+}
+
+@mixin heading2{
+    font-weight: 600;
+    font-size: 15px;
+}
+
+//Colors
+
+$accent : #666AF6;
+$dominant : #878AF5;
+$blueHeading : #31446C;
+$yellow : #F5A921;
+$orange : #F4863C;
+
+//responsive
+@mixin responsive($width) {
+    @media only screen and (min-width: $width) {
+        @content;
+    }
+}
+
+//Header
+
+header{
+    width: 100%;
+    height:150px;
+    display: flex;
+    flex-direction: column;
+    background-color: $accent;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    .date{
+        margin-left: 5px;
+        h1{
+            margin-left: 3px;
+        }
+    }
+    .header__container{
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 20px 15px;
+        z-index: 1;
+        input{
+            background-image: url('/assets/img/icons/search.svg');
+            background-repeat: no-repeat;
+            text-indent: 20px;
+            border: none;
+            border-radius: 20px;
+           }
+           input#search:focus{
+            background-image:none;
+           }
+           .more__div{
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            background-color: $dominant;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -5px;
+           }
+    }
+    .circle{
+        width: 300px;
+        height: 300px;
+        border-radius: 150px;
+        background-color: $dominant;
+        position: absolute;
+        top: 30px;
+        left: -100px;
+    }
+    .date{
+        z-index: 1;
+    }
+    img{
+        width: 20px;
+        cursor: pointer;
+    }
+}
+
+//Main
+main{
+    display: grid;
+    grid-template: 1fr 1fr /1fr 1fr;
+    width: 100%;
+    height: 100vh;
+    .zone{
+        border:1px solid #333;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 10px 5px;
+        box-shadow: 1px 1px 4px #333;
+        .zone__header{
+            background-color: $dominant;
+            padding: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h2{
+                color: $blueHeading;
+                @include heading2;
+                width:75%;
+            }
+        }
+        .addTaskMenu{
+            border-bottom: 1px solid #333;
+            display: none;
+            flex-direction: column;
+            background-color: $accent;
+            padding: 5px;
+            input{
+                width: 100%;
+            }
+            .addTaskMenu__selectAdd{
+                display: flex;
+                justify-content: space-evenly;
+                margin: 10px;
+                select{
+                    border: none;
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+    img{
+        width: 20px;
+        cursor: pointer;
+        margin: 5px;
+    }
+    .task{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 12px;
+        border: 1px solid $blueHeading;
+        padding: 3px;
+        margin: 3px;
+        border-radius: 10px;
+        text-align: center;
+        background-color: #f0f0f0;
+        p{
+            padding-left: 3px;
+        }
+        .projet{
+            background-color: $orange;
+            color: #fff;
+            font-size: 10px;
+            border-radius: 10px;
+            height: 20px;
+            padding: 5px;
+        }
+        .travail{
+            background-color: $blueHeading;
+            color: #fff;
+            font-size: 10px;
+            border-radius: 10px;
+            height: 20px;
+            padding: 5px;
+        }
+        .social{
+            background-color: $yellow;
+            color: #fff;
+            font-size: 10px;
+            border-radius: 10px;
+            height: 20px;
+            padding: 5px;
+        }
+    }
+}

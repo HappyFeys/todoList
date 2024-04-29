@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f7f7;
+  font-family: "Poppins", "Open Sans", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  background-color: #666AF6;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+header .date {
+  margin-left: 5px;
+}
+header .date h1 {
+  margin-left: 3px;
+}
+header .header__container {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 20px 15px;
+  z-index: 1;
+}
+header .header__container input {
+  background-image: url("/assets/img/icons/search.svg");
+  background-repeat: no-repeat;
+  text-indent: 20px;
+  border: none;
+  border-radius: 20px;
+}
+header .header__container input#search:focus {
+  background-image: none;
+}
+header .header__container .more__div {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #878AF5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -5px;
+}
+header .circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+  background-color: #878AF5;
+  position: absolute;
+  top: 30px;
+  left: -100px;
+}
+header .date {
+  z-index: 1;
+}
+header img {
+  width: 20px;
+  cursor: pointer;
+}
+
+main {
+  display: grid;
+  grid-template: 1fr 1fr/1fr 1fr;
+  width: 100%;
+  height: 100vh;
+}
+main .zone {
+  border: 1px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px 5px;
+  box-shadow: 1px 1px 4px #333;
+}
+main .zone .zone__header {
+  background-color: #878AF5;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .zone .zone__header h2 {
+  color: #31446C;
+  font-weight: 600;
+  font-size: 15px;
+  width: 75%;
+}
+main .zone .addTaskMenu {
+  border-bottom: 1px solid #333;
+  display: none;
+  flex-direction: column;
+  background-color: #666AF6;
+  padding: 5px;
+}
+main .zone .addTaskMenu input {
+  width: 100%;
+}
+main .zone .addTaskMenu .addTaskMenu__selectAdd {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+main .zone .addTaskMenu .addTaskMenu__selectAdd select {
+  border: none;
+  border-radius: 20px;
+}
+main img {
+  width: 20px;
+  cursor: pointer;
+  margin: 5px;
+}
+main .task {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 12px;
+  border: 1px solid #31446C;
+  padding: 3px;
+  margin: 3px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+main .task p {
+  padding-left: 3px;
+}
+main .task .projet {
+  background-color: #F4863C;
+  color: #fff;
+  font-size: 10px;
+  border-radius: 10px;
+  height: 20px;
+  padding: 5px;
+}
+main .task .travail {
+  background-color: #31446C;
+  color: #fff;
+  font-size: 10px;
+  border-radius: 10px;
+  height: 20px;
+  padding: 5px;
+}
+main .task .social {
+  background-color: #F5A921;
+  color: #fff;
+  font-size: 10px;
+  border-radius: 10px;
+  height: 20px;
+  padding: 5px;
+}/*# sourceMappingURL=style.css.map */
