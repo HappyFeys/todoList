@@ -1,7 +1,10 @@
-import { addTask} from "./addTask.js";
+import { addTask, initializeTasksInDOM} from "./addTask.js";
 import { deleteTask } from "./deleteTask.js";
+import { checkedTask } from "./checked.js";
 
+initializeTasksInDOM()
 addTask()
+checkedTask()
 deleteTask()
 ///
 
@@ -14,3 +17,7 @@ let dateperso = date1.toLocaleString('fr-FR',{
 });
 
 displayDate.innerText = `Aujourd'hui, le ${dateperso}`
+
+////
+
+

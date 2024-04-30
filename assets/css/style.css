@@ -81,6 +81,9 @@ main .zone {
   overflow: hidden;
   margin: 10px 5px;
   box-shadow: 1px 1px 4px #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 main .zone .zone__header {
   background-color: #878AF5;
@@ -157,4 +160,7 @@ main .task .social {
   border-radius: 10px;
   height: 20px;
   padding: 5px;
+}
+main .task--checked {
+  background-color: #797878;
 }/*# sourceMappingURL=style.css.map */
